@@ -1,0 +1,487 @@
+* {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(236, 228, 252);
+}
+
+header div {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px black;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    font-family: helvetica;
+    font-weight: bold;
+    font-size: 70px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: black;
+    padding-top: 10px;
+    background: linear-gradient(90deg, rgba(245,255,82,1) 0%, rgba(23,10,255,1) 25%, rgba(249,43,210,1) 50%, rgba(255,47,47,1) 75%, rgba(0,255,33,1) 100%);
+    box-shadow: inset 0px -1px 2px rgb(68, 68, 68), 0px 2px 2px rgb(153, 153, 153);
+}
+
+main {
+    margin: 20px;
+    text-align: center;
+}
+
+.questionContainer {
+    text-align: center;
+    display: inline-block;
+    width: 300px;
+    padding: 10px;
+    vertical-align:top;
+    height: 100%;
+    box-shadow: 2px 2px 2px black;
+    gap: 10px;
+    margin: 10px;
+    border: 1px solid rgb(70, 70, 70);
+    border-radius: 5%;
+}
+
+#questionContainerOne {
+    box-shadow:inset 0px 1px 0px 0px #fbafe3, 3px 3px 3px black;
+	background:linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
+	background-color:#ff5bb0;
+	border-radius:6px;
+	border:1px solid #ee1eb5;
+    /* https://www.bestcssbuttongenerator.com/#/32 */
+
+}
+
+#questionContainerTwo {
+    box-shadow:inset 0px 1px 0px 0px #97c4fe, 3px 3px 3px black;
+	background:linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+	background-color:#3d94f6;
+	border-radius:6px;
+	border:1px solid #337fed;
+
+}
+
+#questionContainerThree {
+    box-shadow:inset 0px 1px 0px 0px #f29c93, 3px 3px 3px black;
+	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+	background-color:#fe1a00;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	text-shadow:0px 1px 0px #b23e35;
+}
+
+#questionContainerFour {
+    background-color: rgb(255, 159, 50);
+    box-shadow:inset 0px 1px 0px 0px #fff6af, 3px 3px 3px black;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+
+}
+
+.questionContainer img {
+    width: 240px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 2%;
+}
+
+.questionBox {
+    width: 240px;
+    height: 240px;
+    background-color: white;
+    color: red;
+    margin: 20px auto;
+    border-radius: 2%;
+    border: 1px solid black;
+    font-family: helvetica;
+    font-size: 30px;
+    padding-top: 90px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    box-shadow:inset 0px 0px 3px 1px #3b3b3b;
+}
+
+.sudoku {
+    background-image: url("./images/sudoku2.png");
+    background-size: cover;
+}
+
+.redSquare{
+    vertical-align: top;
+    margin: -61px 6px 0px 4px;
+    width: 230px;
+    height: 30px;
+    box-shadow: 1px 1px 1px black, inset 1px 1px 1px black;
+    border: 5px solid rgb(228, 49, 49);
+    border-radius: 5px;
+}
+
+#questionBoxThree {
+    padding-top: 15px;
+    font-size: 22px;
+    color: whitesmoke;
+    background: linear-gradient(0deg, rgba(6,144,0,1) 0%, rgba(7,175,0,1) 25%, rgba(10,255,0,1) 48%, rgba(157,157,255,1) 52%, rgba(200,200,255,1) 75%, rgba(240,240,255,1) 100%);
+
+}
+
+#nestImage {
+    margin-top: 70px;
+    position: absolute;
+    height: 120px;
+}
+
+#eggStage0 {
+    position: absolute;
+    z-index: 1;
+    margin-left: 50px;
+    width: 120px;
+    cursor: pointer;
+}
+
+#bulbasaur {
+    position: absolute;
+    width: 140px;
+    z-index: 2;
+    margin-left: 50px;
+    display: none;
+}
+
+#counter {
+    display: none;
+}
+
+.lyricBox {
+    text-align: left;
+    width: 240px;
+    height: 240px;
+    background-color: white;
+    color: black;
+    margin: 20px auto;
+    border-radius: 2%;
+    border: 1px solid black;
+    font-family: helvetica;
+    font-size: 18px;
+    /* font-weight: bold; */
+    text-shadow: 1px 1px 1px rgb(128, 128, 128);
+    box-shadow:inset 0px 0px 3px 1px #3b3b3b;
+    padding: 20px 10px 10px 15px;
+}
+
+.songLine {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.questionContainer input{
+    width: 200px;
+    margin: 10px auto;
+    display: block;
+}
+
+.questionContainer button{
+
+    width: 80px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.wrongAnswerText{
+    text-align: center;
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+    font-family: helvetica;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+}
+
+/* Result areas */
+.resultArea {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.resultContainer{
+    text-align: center;
+    margin-top: 20px;
+    height: 60px;
+    width: 300px;
+	background:linear-gradient(to bottom, #707070 5%, #000000 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #2c2c2c;
+	display:inline-block;
+    box-shadow: 2px 2px 2px black, inset 0px 1px 1px 0px #d6d6d6;
+
+}
+
+.resultOutput {
+    font-size: 40px;
+    display: inline-block;
+    padding: 10px 0px 0px 2px;
+    margin: 0px 10px;
+    width: 40px;
+    height: 60px;
+    background: linear-gradient(to bottom, #e3e3e3 5%, #9ea0a3 100%);
+    text-shadow:-1px -1px 1px #313131, 1px 1px 1px rgb(217, 217, 217);
+    color:#585858;
+    font-weight: bold;
+    font-family: helvetica;
+    box-shadow: inset 2px 0px 2px black, inset -2px 0px 2px black;
+}
+
+@media (max-width: 700px) {
+    header {
+        padding-top: 30px;
+        font-size: 30px;
+    }
+}
+
+.hintButton {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color:#ededed;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#777777;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding: 2px 0px;
+    padding-top: 4px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+    width: 80px;
+}
+.hintButton:hover {
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	background-color:#dfdfdf;
+}
+.hintButton:active {
+	position:relative;
+	top:1px;
+}
+
+.checkButton {
+	box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+	background-color:#89c403;
+	border-radius:6px;
+	border:1px solid #74b807;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:2px 0px;
+    padding-top: 4px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528009;
+}
+.checkButton:hover {
+	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+	background-color:#77a809;
+}
+.checkButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+#lockButton{ 
+    display: inline-block;
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	color:#585858;
+	font-family:Arial;
+	font-size: 30px;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:-1px -1px 0px #1d1d1d, 1px 1px 0px rgb(134, 134, 134);
+    vertical-align: top;
+    margin: 20px;
+    width: 160px;
+    height: 60px;
+}
+
+#unlockButton {
+	box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+	background-color:#89c403;
+	border-radius:6px;
+	border:1px solid #74b807;
+	display:none;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size: 30px;
+	font-weight:bold;
+	padding:2px 0px;
+    padding-top: 4px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528009;
+    vertical-align: top;
+    margin: 20px;
+    width: 160px;
+    height: 60px;
+}
+#unlockButton:hover {
+	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+	background-color:#77a809;
+}
+#unlockButton:active {
+	position:relative;
+	top:1px;
+}
+
+.popupContainer {
+    width: 400px;
+    height: 300px;
+    border-radius: 6px;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    z-index: 3;
+    box-shadow:inset 0px 1px 0px 0px #ffffff, 2px 2px 2px rgb(70, 70, 70);
+	background:linear-gradient(to bottom, whitesmoke 5%, #f6f6f6 100%);
+	background-color:whitesmoke;
+	border-radius:6px;
+	border:1px solid #969696;
+}
+
+.cakeImg {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px rgb(255, 0, 0), 5px -5px 5px rgb(47, 0, 255), -5px 5px 5px rgb(36, 218, 0), -5px -5px 5px rgb(255, 230, 0);
+
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#hintHeadline {
+    font-family: helvetica;
+    font-size: 70px;
+    font-weight: 1000;
+    color: red;
+    text-shadow: 1px 1px black, -1px -1px rgb(255, 162, 162);
+}
+
+#hintTextBox {
+    border: 1px solid black;
+    margin: 0 auto;
+    width: 300px;
+    height: 100px;
+    padding: 22px;
+    font-family: helvetica;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px grey;
+    box-shadow: inset;
+    box-shadow:inset 0px 0px 3px 1px #8f8f8f;
+    border-radius: 5px;
+
+}
+
+.popupContainer button {
+    margin-top: 13px;
+}
+
+.hideButton {
+    display: none;
+}
+
+#hintConfirm {
+    width: 160px;
+}
+
+
+.finalContainer {
+    width: 800px;
+    height: 500px;
+    border-radius: 6px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.1) rotate(180deg);
+    text-align: center;
+    visibility: hidden;
+    transition: transform 0.5s;
+    z-index: 3;
+    box-shadow:inset 0px 1px 0px 0px #ffffff, 2px 2px 2px rgb(70, 70, 70);
+	background:linear-gradient(to bottom, whitesmoke 5%, #f6f6f6 100%);
+	background-color:whitesmoke;
+	border-radius:6px;
+	border:1px solid #969696;
+}
+
+.open-final{
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+}
+
+#finalHeadline {
+    font-family: helvetica;
+    font-size: 70px;
+    font-weight: 1000;
+    color: red;
+    text-shadow: 1px 1px black, -1px -1px rgb(255, 162, 162);
+}
+
+.finalText {
+    border: 1px solid black;
+    margin: 15px auto;
+    width: 700px;
+    height: 300px;
+    padding: 20px;
+    font-family: helvetica;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px grey;
+    box-shadow: inset;
+    box-shadow:inset 0px 0px 3px 1px #8f8f8f;
+    border-radius: 5px;
+}
+
+#closeButton{
+    text-align: center;
+    padding-left: 1px;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-family: helvetica;
+    font-size: 21px;
+    font-weight: 1000;
+    cursor: pointer;
+    border-radius: 50%;
+    color: rgb(175, 175, 175);
+    box-shadow: 2px 2px 2px rgb(255, 0, 0), 2px -2px 2px rgb(47, 0, 255), -2px 2px 2px rgb(36, 218, 0), -2px -2px 2px rgb(255, 230, 0);
+
+}
+/* https://codepen.io/Jemimaabu/pen/vYEYdOy */
+

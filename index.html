@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Happy Birthday</title>
+    <link rel="icon" type="image/x-icon" href="/images/webIcon.png">
+
+    <script src="./script.js"></script>
+</head>
+
+<body>
+
+    <!-- Banner section -->
+
+    <header class="banner">
+        <div>Birthday Challenge!</div>
+    </header>
+
+    <!-- Includes the html for the popup window when clicking "hint" -->
+
+    <div class="popupContainer" id="popup">
+        <img class="cakeImg" src="./images/cake.png" alt="">
+        <div id="hintHeadline">HINT!</div> 
+        <div id="hintTextBox">Are you sure you want a hint?</div>
+        <button class="hintButton" id="hintYes" onclick="hint()">YES</button>
+        <button class="hintButton" id="hintNo" onclick="closePopup()">NO</button>       
+        <button class="hintButton hideButton"  id="hintConfirm" onclick="confirmHint()">CLOSE</button> 
+    </div>
+
+    <!-- Includes the html for the window that pops up after finishing all riddles and clicking the unlock button -->
+
+    <div class="finalContainer" id="finalPopup">
+        <img class="cakeImg" src="./images/cake.png" alt="">
+        <div>
+            <div id="finalHeadline">HAPPY BIRTHDAY!</div> 
+        </div>
+        <div class="finalText" >
+            My dear sweet Lucy, you did it! 🥳<br><br>
+            I wish you the happiest of birthdays. I hope you will have an amazing day (or had an amazing day, depending on when you solved this 🤭),
+            with (<i>a lot of</i>) cake 🍰, gifts 🎁 and birthday greetings!
+            <br><br>
+            Unfortunately, I was unable to be here 😭, but I hope you enjoyed this little riddle I made for you❓ Now it's time for your gift! 
+            Use the code from the riddle to unlock your present 🔓 I hope you like it❗
+        </div>
+        <div id="closeButton" onclick="closeFinal()">X</div>
+
+    </div>
+
+    <!-- Includes the number lock / result container and the locked / unlock button -->
+
+    <div class="resultArea">
+        <div class="resultContainer">
+            <div class="resultOutput" id="resultOne">0</div>
+            <div class="resultOutput" id="resultTwo">0</div>
+            <div class="resultOutput" id="resultThree">0</div>
+            <div class="resultOutput" id="resultFour">0</div>
+        </div>
+        <button id="lockButton" onclick="openFinal()">LOCKED</button>
+        <button id="unlockButton" onclick="openFinal()">UNLOCK</button>
+    </div>
+
+
+
+    <!-- Question 1, the first box to the left -->
+    <main>
+        <div class="questionContainer" id="questionContainerOne">
+            <div class="questionBox">
+                How much do I like you?
+            </div>
+            <label for="answerOne"></label>
+            <div>
+            <input type="text" placeholder=" Answer.." id="answerOne" />
+            </div>
+            <button class="checkButton" onclick="compareAnswerOne()">Check</button>
+            <button class="hintButton" onclick="openPopup(1)">Hint</button>
+            <div class="wrongAnswerText" id="wrongAnswerOne">&nbsp</div>
+        </div>
+
+
+    <!-- Question 2, the second box from the left -->
+        <div class="questionContainer" id="questionContainerTwo">
+            <div class="questionBox sudoku">
+                <div class="redSquare"></div>
+                <!-- image in CSS https://www.websudoku.com/ puzzle 7,426,744,062 -->
+            </div>
+            <label for="answerTwo"></label>
+            <div>
+            <input type="text" placeholder=" Answer.." id="answerTwo" />
+            </div>
+            <button class="checkButton" onclick="compareAnswerTwo()">Check</button>
+            <button class="hintButton" onclick="openPopup(2)">Hint</button>
+            <div class="wrongAnswerText" id="wrongAnswerTwo">&nbsp</div>
+        </div>
+
+    <!-- Question 3, the second box from the right -->
+        <div class="questionContainer" id="questionContainerThree">
+            <div class="questionBox" id="questionBoxThree">
+                Who's in the egg?
+                <img id="bulbasaur" src="./images/bulbasaur.png" alt=""> 
+                <img id="eggStage0" onclick="eggTwitch()" src="./images/eggStage0.png">
+                <img id="nestImage" src="./images/nest.png" alt=""> 
+                <div id="counter">1</div>
+            </div>
+            <label for="answerThree"></label>
+            <div>
+            <input type="text" placeholder=" Answer.." id="answerThree" />
+            </div>
+            <button class="checkButton" onclick="compareAnswerThree()">Check</button>
+            <button class="hintButton" onclick="openPopup(3)">Hint</button>
+            <div class="wrongAnswerText" id="wrongAnswerThree">&nbsp</div>
+        </div>
+
+    <!-- Question 4, the first box to the right -->
+        <div class="questionContainer" id="questionContainerFour">
+            <div class="lyricBox">
+                <p class="songLine">the beach boyS:</p>
+                <p class="lyrics"> wouldn't it be nice if We were older? <br>
+                thEn we wouldn't havE to wait so long <br>
+                and wouldn't iT be nice to lIve together <br>
+                in the kind of world whEre we belong?</p>
+            </div>
+            <label for="answerFour"></label>
+            <div>
+            <input type="text" placeholder=" Answer.." id="answerFour" />
+            </div>
+            <button class="checkButton" onclick="compareAnswerFour()">Check</button>
+            <button class="hintButton" onclick="openPopup(4)">Hint</button>
+            <div class="wrongAnswerText" id="wrongAnswerFour">&nbsp</div>
+        </div>
+    </main>
+
+</body>
+</html>
