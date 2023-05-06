@@ -56,7 +56,7 @@ let currentHintNo;
                     document.getElementById("hintTextBox").innerHTML = "Buzz Lightyear might have said it to his girlfriend";
                     break;
                 case 2:
-                    document.getElementById("hintTextBox").innerHTML = "Look at the numbers within the redbox! You might need to solve it first";
+                    document.getElementById("hintTextBox").innerHTML = "Look at the numbers within the red square! You might need to solve it first";
                     break;
                 case 3:
                     document.getElementById("hintTextBox").innerHTML = "Have you clicked the egg? Try to click again.. and again";
@@ -71,15 +71,15 @@ let currentHintNo;
         function eggTwitch(){
             let counter = document.getElementById("counter").innerHTML
             
-            if (counter >= 5 && counter <= 10) {
+            if (counter >= 10 && counter <= 20) {
                 document.getElementById("eggStage0").src="./images/eggStage1.png";
-            } else if (counter >10 && counter <= 15) {
+            } else if (counter >20 && counter <= 30) {
                 document.getElementById("eggStage0").src="./images/eggStage2.png";
-            } else if (counter >15 && counter <= 20) {
+            } else if (counter >30 && counter <= 40) {
                 document.getElementById("eggStage0").src="./images/eggStage3.png";
-            } else if (counter >20 && counter <= 25) {
+            } else if (counter >40 && counter <= 50) {
                 document.getElementById("eggStage0").src="./images/eggStage4.png";
-            } else if (counter >25 && counter <= 30){
+            } else if (counter >50){
                 document.getElementById("eggStage0").style.display ="none";
                 document.getElementById("bulbasaur").style.display ="block";
             }

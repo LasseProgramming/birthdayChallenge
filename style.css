@@ -317,6 +317,7 @@ main {
     margin: 20px;
     width: 160px;
     height: 60px;
+    box-shadow: 2px 2px 2px black;
 }
 
 #unlockButton {
@@ -339,6 +340,7 @@ main {
     margin: 20px;
     width: 160px;
     height: 60px;
+    box-shadow: 2px 2px 2px black;
 }
 #unlockButton:hover {
 	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
